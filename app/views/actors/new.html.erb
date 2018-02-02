@@ -1,5 +1,7 @@
 <center>
 <h1>Add New Actor </h1>
+
+
 <%= form_with scope: :actor, url: actors_path do |form| %>
 <table>
 <tr>
@@ -16,6 +18,6 @@
 </tr>
 </table>
   <%= form.submit %>
-  <%= link_to 'Back', movies_path %>
+  <%= link_to 'Back', movies_path() %>
 
 <% end %>
