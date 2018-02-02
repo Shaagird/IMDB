@@ -10,7 +10,9 @@ class MoviesController < ApplicationController
 
   def show
   	@movie = Movie.find(params[:id])
+  	@actors = @movie.actors
   end
+
 	def create
 		@movie = Movie.new(movie_params)
 		if @movie.save
@@ -19,7 +21,11 @@ class MoviesController < ApplicationController
 			render 'new'
 		end
 	end
-
+  def destroy
+  	@movie = Movie.find(params[:id])
+  	@movie.destroy
+  	redirect_to movies_path
+  end
 	private
 
 	def movie_params

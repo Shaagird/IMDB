@@ -12,6 +12,13 @@
 		<td><%= @movie.description %></td>
 	</tr>
 </table>
-
+<br>
 <%= link_to 'Back', movies_path %>
+&nbsp; &nbsp;
+<%= link_to 'Add Actor To This Movie', new_actor_path(movie_id: @movie) %> 
+<br><br>
+<strong>Actor(s) In This Movie Are</strong>
+<% @actors.each do |actor| %>
+		<ul><%= actor.name %></ul>
+	<% end %>
 </center>

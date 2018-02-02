@@ -14,6 +14,7 @@
 	 <td><%= movie.release_date.strftime("%d/%m/%Y") %></td>
 	 <td><%= movie.description %></td>
 	 <td><%= link_to 'Show Details', movie_path(movie) %></td>
+	 <td><%= link_to 'Delete Movie', movie, method: :delete, data: {confirm: 'Are You Sure..??'} %></td>		 
 	 </tr>
 	 <% end %>
 	 </table><br>

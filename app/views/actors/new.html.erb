@@ -10,7 +10,12 @@
 	<td><%= form.label :'Date Of  Birth' %></td>
   <td><%= form.date_field :dob %></td>
 </tr>
+
+<tr>
+  <td><%= form.hidden_field :movie_id, :value => params[:movie_id]%></td>
+</tr>
 </table>
   <%= form.submit %>
+  <%= link_to 'Back', movies_path %>
 
 <% end %>
