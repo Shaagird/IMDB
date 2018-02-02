@@ -1,0 +1,22 @@
+<center><h1>List Of All Movies</h1>
+
+<table border="2">
+  <tr>
+	<th>Actor Name</th>
+	<th>Date of Birth</th>
+	<th colspan="3"></th>
+	</tr>
+
+	<% @actor.each do |actor| %>
+	<tr>
+	 <td><%= actor.name %></td>
+	 <td><%= actor.dob.strftime("%d/%m/%Y") %></td>
+	 <td><%= link_to 'Add Movie For This Actor', actor_path(actor),
+	 												method: :patch %></td>
+	 </tr>
+	 <% end %>
+	 </table><br>
+	 <%= link_to 'Add a New Movie', new_movie_path %>
+	 &nbsp; &nbsp;
+	 <%= link_to 'Add New Actor', new_actor_path %>
+	 </center>

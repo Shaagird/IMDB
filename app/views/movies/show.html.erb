@@ -1,0 +1,17 @@
+<center>
+<h1> You Added A Movie </h1>
+<table border="1">
+	<tr>
+		<th>Movie Name</th>
+		<th>Date Of Release</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td><%= @movie.name %></td>
+		<td><%= @movie.release_date.strftime("%d/%m/%Y") %></td>
+		<td><%= @movie.description %></td>
+	</tr>
+</table>
+
+<%= link_to 'Back', movies_path %>
+</center>

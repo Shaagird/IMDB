@@ -1,0 +1,16 @@
+<center>
+<h1>Add New Actor </h1>
+<%= form_with scope: :actor, url: actors_path do |form| %>
+<table>
+<tr>
+  <td><%= form.label :'Name' %></td>
+  <td><%= form.text_field :name %></td>
+</tr>
+<tr>
+	<td><%= form.label :'Date Of  Birth' %></td>
+  <td><%= form.date_field :dob %></td>
+</tr>
+</table>
+  <%= form.submit %>
+
+<% end %>
