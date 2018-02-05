@@ -4,10 +4,6 @@ class ActorsController < ApplicationController
     @actor = Actor.all.select("name, dob")
 	end
 
-  def abc
-    abc
-  end
-
 	def new
 	end
 
