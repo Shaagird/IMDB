@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
 	def index
-		@movie = Movie.all
+		@movie = Movie.all.select("id, name, release_date, description")
 	end
 
  def new

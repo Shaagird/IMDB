@@ -1,7 +1,7 @@
 class ActorsController < ApplicationController
 	
 	def index
-    @actor = Actor.all
+    @actor = Actor.all.select("name, dob")
 	end
 
 	def new
